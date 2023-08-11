@@ -36,6 +36,7 @@ logger: logging.Logger = logging.getLogger(__name__)
 
 register_custom_type(sqlalchemy.dialects.mssql.BIT, BooleanTypeClass)
 register_custom_type(sqlalchemy.dialects.mssql.SQL_VARIANT, UnionTypeClass)
+register_custom_type(sqlalchemy.dialects.mssql.UNIQUEIDENTIFIER, StringTypeClass)           #CJM08112023
 
 
 class SQLServerConfig(BasicSQLAlchemyConfig):
